@@ -67,9 +67,9 @@
                 {
                     "type": "git",
                     "url": "https://github.com/Chowdhury-DSP/BYOD.git",
-                    "tag": "v1.2.0",
-                    "commit": "6a0f2cdc54156e2f38e355cd317b0975233cd945",
-                    "x-checker-data": {
+                    "// tag": "v1.2.0",
+                    "commit": "b644c032cd5cdc2267598908d680b10b640bfc08",
+                    "// x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^v([\\d.]+)$"
                     }
