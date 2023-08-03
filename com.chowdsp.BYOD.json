@@ -76,7 +76,10 @@
                 },
                 {
                     "type": "patch",
-                    "path": "patches/juce-616-header.patch"
+                    "paths": [
+                        "patches/juce-616-header.patch",
+                        "patches/byod-331.patch"
+                    ]
                 },
                 {
                     "type": "patch",
