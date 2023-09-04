@@ -30,6 +30,43 @@
   <update_contact>hub_AT_figuiere.net</update_contact>
   <content_rating type="oars-1.1" />
   <releases>
+    <release version="1.2.0" date="2023-08-01">
+      <description>
+        <ul>
+          <li>Added "Flapjack" module.</li>
+          <li>Added "Fuzz Machine" module.</li>
+          <li>Added "Mouse Drive" module.</li>
+          <li>Added "Crying Child" module.</li>
+          <li>Added "Krusher" module.</li>
+          <li>Added "Solo-Vibe" module.</li>
+          <li>Added "Ladder Filter" module.</li>
+          <li>Added "MIDI Modulator" and "Param Modulator"
+          modules.</li>
+          <li>Added level tracking input and output ports for relevant
+          modules.</li>
+          <li>Added "netlist view" to allow for customization of some
+          circuit-modelled modules.</li>
+          <li>Added AVX support (for PCs that support it) for neural network-based modules.</li>
+          <li>Added mouse interactions for selecting and
+          moving/deleting multiple modules at once.</li>
+          <li>Added port tooltips.</li>
+          <li>Added sample rate correction filter for GuitarML
+          module.</li>
+          <li>Added support for CLAP preset discovery and preset
+          loading.</li>
+          <li>Improved preset search results.</li>
+          <li>Improved custom IR loading/saving for "Amp IRs"
+          module.</li>
+          <li>Improved IR menu UX with mouse and keyboard
+          interactions.</li>
+          <li>Improved plugin RAM usage.</li>
+          <li>Fixed hardened runtime flags for standalone audio input
+          on MacOS.</li>
+          <li>Fixed LFO waveform in Tremolo module.</li>
+          <li>Fixed crash when scrolling presets in Loopy Pro.</li>
+        </ul>
+      </description>
+    </release>
     <release date="2023-01-13" version="1.1.3" />
     <release date="2022-11-21" version="1.1.0" />
     <release date="2022-03-15" version="1.0.1" />
