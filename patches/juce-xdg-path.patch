@@ -1,7 +1,7 @@
 diff --git a/modules/juce_audio_plugin_client/Standalone/juce_StandaloneFilterApp.cpp b/modules/juce_audio_plugin_client/Standalone/juce_StandaloneFilterApp.cpp
 index 1f13a1d8a..cfc779795 100644
---- a/modules/juce_audio_plugin_client/Standalone/juce_StandaloneFilterApp.cpp
-+++ b/modules/juce_audio_plugin_client/Standalone/juce_StandaloneFilterApp.cpp
+--- a/modules/juce_audio_plugin_client/juce_audio_plugin_client_Standalone.cpp
++++ b/modules/juce_audio_plugin_client/juce_audio_plugin_client_Standalone.cpp
 @@ -56,7 +56,7 @@ public:
          options.filenameSuffix      = ".settings";
          options.osxLibrarySubFolder = "Application Support";
@@ -13,8 +13,8 @@ index 1f13a1d8a..cfc779795 100644
         #endif
 diff --git a/modules/juce_core/native/juce_linux_Files.cpp b/modules/juce_core/native/juce_linux_Files.cpp
 index 38429ba69..5c7bf66fc 100644
---- a/modules/juce_core/native/juce_linux_Files.cpp
-+++ b/modules/juce_core/native/juce_linux_Files.cpp
+--- a/modules/juce_core/native/juce_Files_linux.cpp
++++ b/modules/juce_core/native/juce_Files_linux.cpp
 @@ -124,7 +124,16 @@ File File::getSpecialLocation (const SpecialLocationType type)
          case userMoviesDirectory:             return resolveXDGFolder ("XDG_VIDEOS_DIR",    "~/Videos");
          case userPicturesDirectory:           return resolveXDGFolder ("XDG_PICTURES_DIR",  "~/Pictures");

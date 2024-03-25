@@ -42,6 +42,11 @@
         {
             "name": "byod",
             "buildsystem": "cmake-ninja",
+            "build-options": {
+                "env": {
+                    "CPM_SOURCE_CACHE": "/run/build/byod/.cache/CPM"
+                }
+            },
             "config-opts": [
                 "-DCMAKE_AR=/usr/bin/gcc-ar",
                 "-DCMAKE_NM=/usr/bin/gcc-nm",
@@ -61,25 +66,25 @@
                 "install -Dm644 com.chowdsp.BYOD.desktop -t ${FLATPAK_DEST}/share/applications",
                 "install -Dm644 com.chowdsp.BYOD.metainfo.xml -t ${FLATPAK_DEST}/share/metainfo",
                 "install -Dm644 org.freedesktop.LinuxAudio.Plugins.BYOD.metainfo.xml -t ${PLUGINS_DIR}/share/metainfo/",
-                "appstream-compose --basename=${PLUGINS_ID} --prefix=${PLUGINS_DIR} --origin=flatpak ${PLUGINS_ID}"
+                "appstreamcli compose --components=${PLUGINS_ID} --prefix=/ --origin=${PLUGINS_ID} --result-root=${PLUGINS_DIR} --data-dir=${PLUGINS_DIR}/share/app-info/xmls ${PLUGINS_DIR}"
             ],
             "sources": [
                 {
                     "type": "git",
                     "url": "https://github.com/Chowdhury-DSP/BYOD.git",
-                    "// tag": "v1.2.0",
-                    "commit": "b644c032cd5cdc2267598908d680b10b640bfc08",
-                    "// x-checker-data": {
+                    "tag": "v1.3.0",
+                    "commit": "3562e3cd4dc569d526aa4610da7a17f79ab5211f",
+                    "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^v([\\d.]+)$"
                     }
                 },
                 {
-                    "type": "patch",
-                    "paths": [
-                        "patches/juce-616-header.patch",
-                        "patches/byod-331.patch"
-                    ]
+                    "type": "file",
+                    "url": "https://github.com/cpm-cmake/CPM.cmake/releases/download/v0.38.6/CPM.cmake",
+                    "sha256": "11c3fa5f1ba14f15d31c2fb63dbc8628ee133d81c8d764caad9a8db9e0bacb07",
+                    "dest": ".cache/CPM/cpm",
+                    "dest-filename": "CPM_0.38.6.cmake"
                 },
                 {
                     "type": "patch",
