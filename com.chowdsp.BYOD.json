@@ -2,7 +2,7 @@
     "id": "com.chowdsp.BYOD",
     "runtime": "org.freedesktop.Platform",
     "sdk": "org.freedesktop.Sdk",
-    "runtime-version": "23.08",
+    "runtime-version": "24.08",
     "command": "BYOD",
     "finish-args": [
         "--socket=x11",
@@ -20,7 +20,7 @@
     "add-extensions": {
         "org.freedesktop.LinuxAudio.Plugins.BYOD": {
             "directory": "extensions/Plugins/BYOD",
-            "version": "23.08",
+            "version": "24.08",
             "add-ld-path": "lib",
             "bundle": true,
             "subdirectories": true,
@@ -88,7 +88,9 @@
                 },
                 {
                     "type": "patch",
-                    "path": "patches/juce-xdg-path.patch",
+                    "paths": [
+                        "patches/juce-xdg-path.patch"
+                    ],
                     "options": [
                         "-d",
                         "modules/JUCE"
