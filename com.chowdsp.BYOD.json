@@ -2,7 +2,7 @@
     "id": "com.chowdsp.BYOD",
     "runtime": "org.freedesktop.Platform",
     "sdk": "org.freedesktop.Sdk",
-    "runtime-version": "24.08",
+    "runtime-version": "25.08",
     "command": "BYOD",
     "finish-args": [
         "--socket=x11",
@@ -20,7 +20,7 @@
     "add-extensions": {
         "org.freedesktop.LinuxAudio.Plugins.BYOD": {
             "directory": "extensions/Plugins/BYOD",
-            "version": "24.08",
+            "version": "25.08",
             "add-ld-path": "lib",
             "bundle": true,
             "subdirectories": true,
@@ -43,6 +43,7 @@
             "name": "byod",
             "buildsystem": "cmake-ninja",
             "build-options": {
+                "cxxflags": "-Wno-error=template-body",
                 "env": {
                     "CPM_SOURCE_CACHE": "/run/build/byod/.cache/CPM"
                 }
