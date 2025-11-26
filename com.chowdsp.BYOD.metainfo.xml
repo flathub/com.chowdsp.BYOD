@@ -88,4 +88,11 @@
     <release date="2022-11-21" version="1.1.0"/>
     <release date="2022-03-15" version="1.0.1"/>
   </releases>
+  <keywords>
+    <keyword>distortion</keyword>
+    <keyword>guitar effects</keyword>
+    <keyword>plugin</keyword>
+    <keyword>build your own</keyword>
+    <keyword>digital audio</keyword>
+  </keywords>
 </component>
