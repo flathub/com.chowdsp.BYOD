@@ -2,7 +2,7 @@
     "id": "com.chowdsp.BYOD",
     "runtime": "org.freedesktop.Platform",
     "sdk": "org.freedesktop.Sdk",
-    "runtime-version": "25.08",
+    "runtime-version": "26.08",
     "command": "BYOD",
     "finish-args": [
         "--socket=x11",
@@ -20,7 +20,7 @@
     "add-extensions": {
         "org.freedesktop.LinuxAudio.Plugins.BYOD": {
             "directory": "extensions/Plugins/BYOD",
-            "version": "25.08",
+            "version": "26.08",
             "add-ld-path": "lib",
             "bundle": true,
             "subdirectories": true,
@@ -38,6 +38,7 @@
         "/lib/pkgconfig"
     ],
     "modules": [
+        "shared-modules/appstream/appstream-compose.json",
         "shared-modules/linux-audio/lv2.json",
         {
             "name": "byod",
